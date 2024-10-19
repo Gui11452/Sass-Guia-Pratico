@@ -30,6 +30,7 @@
 11. [Funções Internas](#11---funções-internas)
 12. [Responsividade](#12---responsividade)
 13. [Debug e Erros](#13---debug-e-erros)
+14. [Utils Personalizados](#14---utils-personalizados)
 ## 1 - Introdução
 
 O SASS (Syntactically Awesome Stylesheets) é um pré-processador CSS que estende a funcionalidade do CSS tradicional, trazendo mais poder e organização para os estilos. Ele permite utilizar recursos como variáveis, aninhamento de seletores, mixins (blocos reutilizáveis de código), herança, e funções matemáticas, facilitando a escrita e a manutenção de folhas de estilo, especialmente em projetos de grande escala.
@@ -1474,4 +1475,46 @@ $theme: 'unknown';
 #### Saída no Console:
 ```
 Error: Tema inválido: unknown. O tema deve ser 'dark' ou 'light'.
+```
+
+## 14 - Utils Personalizados
+
+### Container Flex
+```scss
+@mixin display-flex($flex-direction:row, $flex-wrap: nowrap, $justify-content: center, $align-center: center, $gap: 20px){
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    justify-content: $justify-content;
+    align-items: $align-center;
+    gap: $gap;
+}
+```
+
+### Loader
+```scss
+@mixin loader($width: 5rem, $border-width: 0.5rem, $border-color: black, $border-top-color: blue, $duration: 1s){
+    display: inline-block;
+    border-radius: 50%;
+    width: $width;
+    height: $width;
+    border-width: $border-width;
+    border-style: solid;
+    border-color: $border-color;
+    border-top-color: $border-top-color;
+    animation: animation-loader $duration linear infinite;
+
+    @keyframes animation-loader{
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
+```
+
+### Transformador Pixel para Rem
+```scss
+@function px-to-rem($px, $base: 16px) {
+    @return $px / $base * 1rem;
+}
 ```
