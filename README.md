@@ -19,7 +19,7 @@
 ## Sumário
 1. [Introdução](#introdução)
 2. [Instalação e Configuração](#instalação-e-configuração)
-3. [Variáveis](#variaveis)
+3. [Variaveis](#variaveis)
 4. [Introdução](#introdução)
 5. [Introdução](#introdução)
 
@@ -68,7 +68,7 @@ nav {
 Se você já está acostumada com CSS tradicional, o SCSS é uma escolha natural, pois a sintaxe é quase idêntica.
 Se prefere uma abordagem minimalista e gosta de trabalhar com indentação, a sintaxe SASS pode ser mais adequada.
 ## Instalação e Configuração
-## Variáveis
+## Variaveis
 
 O Sass permite o uso de variáveis, facilitando a reutilização de valores como cores, tamanhos e fontes em todo o projeto. Isso melhora a organização e a consistência dos estilos. Abaixo, vou mostrar como você pode usar variáveis no Sass.
 
