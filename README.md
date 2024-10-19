@@ -28,8 +28,8 @@
 9. [Mapas e Listas](#9---mapas-e-listas)
 10. [Loops e Estruturas Repetitivas](#10---loops-e-estruturas-repetitivas)
 11. [Funções Internas](#11---funções-internas)
-12. [Media Queries Aninhadas e Responsividade no SASS](#11---media-queries-aninhadas-e-responsividade-no-sass)
-13. [Ferramentas para Debug e Tratamento de Erros](#12---ferramentas-para-debug-e-tratamento-de-erros)
+12. [Responsividade](#12---responsividade)
+13. [Debug e Erros](#13---debug-e-erros)
 ## 1 - Introdução
 
 O SASS (Syntactically Awesome Stylesheets) é um pré-processador CSS que estende a funcionalidade do CSS tradicional, trazendo mais poder e organização para os estilos. Ele permite utilizar recursos como variáveis, aninhamento de seletores, mixins (blocos reutilizáveis de código), herança, e funções matemáticas, facilitando a escrita e a manutenção de folhas de estilo, especialmente em projetos de grande escala.
@@ -1141,7 +1141,7 @@ $cores: (
 $extra-cores: (danger: #e74c3c);
 $all-cores: map-merge($cores, $extra-cores);
 ```
-## 12 - Media Queries Aninhadas e Responsividade no SASS
+## 12 - Responsividade
 O SASS facilita a criação de media queries aninhadas, tornando o código mais legível e organizado. Com essa funcionalidade, você pode definir estilos responsivos diretamente dentro do seletor correspondente, eliminando a necessidade de duplicação e mantendo a hierarquia do código clara.
 
 ### 12.1 - Exemplo Básico de Media Query Aninhada
@@ -1329,7 +1329,7 @@ Com media queries aninhadas e mixins reutilizáveis, o SASS facilita a criação
 - Mais fácil de manter, pois cada media query é colocada diretamente no contexto relevante.
 - Reutilizável, utilizando mixins e variáveis para breakpoints.
 - Escalável, especialmente em projetos grandes, onde a organização e modularidade são cruciais.
-## 13 - Ferramentas para Debug e Tratamento de Erros
+## 13 - Debug e Erros
 O SASS oferece as diretivas @debug, @warn e @error para ajudar no debug e no tratamento de erros. Essas ferramentas são úteis para identificar problemas durante a compilação e garantir que seu CSS seja gerado corretamente.
 
 ### 13.1 - @debug: Exibe Informações para Debug
