@@ -22,7 +22,7 @@
 3. [Variaveis](#3---variaveis)
 4. [Seletores CSS](#4---seletores-css)
 5. [Partials e Importações](#5---partials-e-importações)
-6. [Mixin](#6---mixin)
+6. [Mixin e Funções](#6---mixin-e-funções)
 7. [Extend e Herança](#7---extend-e-Herança)
 8. [Operadores e Condicionais](#8---operadores-e-condicionais)
 9. [Mapas e Listas](#9---mapas-e-listas)
@@ -535,7 +535,9 @@ body {
 - Permite ocultar partes do código com a palavra-chave hide.
 
 
-## 6 - Mixin
+## 6 - Mixin e Funções
+
+### 6.1 - Mixin
 O mixin em Sass é uma maneira poderosa de reutilizar blocos de código CSS em vários lugares. Ele é parecido com uma função: você define o mixin com o código CSS desejado e depois o "chama" onde precisar. Mixins ajudam a manter o código limpo e evitam repetição, especialmente quando você tem muitos estilos semelhantes.
 
 #### Sintaxe Básica:
@@ -643,6 +645,39 @@ div {
 	background-color: yellow;
 	padding: 10px;
 	border: 1px solid black;
+}
+```
+
+### 6.2 - Funções
+O SASS permite a criação de funções personalizadas, além de suas funções internas, para realizar operações específicas e reutilizar lógicas complexas. Essas funções são definidas com a diretiva @function e são especialmente úteis para lidar com cálculos, transformações de strings, manipulação de cores, e criação dinâmica de estilos.
+
+#### Sintaxe de @function
+```scss
+@function nome-da-funcao($parametro1, $parametro2) {
+  @return $parametro1 + $parametro2;
+}
+```
+
+- As funções no SASS devem sempre retornar um valor com @return.
+- Você pode usar essas funções como faria com as funções internas do SASS.
+
+#### Exemplo: Função para Cálculo de rem
+#### Sass
+```scss
+@function px-to-rem($px, $base: 16px) {
+  @return $px / $base * 1rem;
+}
+
+// Uso:
+body {
+  font-size: px-to-rem(24px); // 1.5rem
+}
+```
+
+#### CSS Gerado
+```scss
+body {
+  font-size: 1.5rem;
 }
 ```
 ## 7 - Extend e Herança
