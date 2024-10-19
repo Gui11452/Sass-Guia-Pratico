@@ -17,19 +17,19 @@
 
 
 ## Sumário
-1. [Introdução](#introdução)
-2. [Instalação e Configuração](#instalação-e-configuração)
-3. [Variaveis](#variaveis)
-4. [Seletores CSS](#seletores-css)
-5. [Partials e Importações](#partials-e-importações)
-6. [Mixin](#mixin)
-7. [Extend e Herança](#extend-e-Herança)
-8. [Operadores e Condicionais](#operadores-e-condicionais)
-9. [Mapas e Listas](#mapas-e-listas)
-10. [Loops e Estruturas Repetitivas](#loops-e-estruturas-repetitivas)
-11. [Funções Internas](#funções-internas)
-12. [Media Queries Aninhadas e Responsividade no SASS](#media-queries-aninhadas-e-responsividade-no-sass)
-13. [Ferramentas para Debug e Tratamento de Erros](#ferramentas-para-debug-e-tratamento-de-erros)
+1. [Introdução](#1---introdução)
+2. [Instalação e Configuração](#2---instalação-e-configuração)
+3. [Variaveis](#3---variaveis)
+4. [Seletores CSS](#4---seletores-css)
+5. [Partials e Importações](#5---partials-e-importações)
+6. [Mixin](#6---mixin)
+7. [Extend e Herança](#7---extend-e-Herança)
+8. [Operadores e Condicionais](#8---operadores-e-condicionais)
+9. [Mapas e Listas](#9---mapas-e-listas)
+10. [Loops e Estruturas Repetitivas](#10---loops-e-estruturas-repetitivas)
+11. [Funções Internas](#11---funções-internas)
+12. [Media Queries Aninhadas e Responsividade no SASS](#11---media-queries-aninhadas-e-responsividade-no-sass)
+13. [Ferramentas para Debug e Tratamento de Erros](#12---ferramentas-para-debug-e-tratamento-de-erros)
 ## 1 - Introdução
 
 O SASS (Syntactically Awesome Stylesheets) é um pré-processador CSS que estende a funcionalidade do CSS tradicional, trazendo mais poder e organização para os estilos. Ele permite utilizar recursos como variáveis, aninhamento de seletores, mixins (blocos reutilizáveis de código), herança, e funções matemáticas, facilitando a escrita e a manutenção de folhas de estilo, especialmente em projetos de grande escala.
