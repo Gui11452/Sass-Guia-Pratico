@@ -1522,5 +1522,5 @@ Error: Tema inválido: unknown. O tema deve ser 'dark' ou 'light'.
     @return $px / $base * 1rem;
 }
 
-font-size: px-to-rem(24px); // 1.5rem
+@include utils.px-to-rem(24px); // 1.5rem
 ```
