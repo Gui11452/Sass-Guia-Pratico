@@ -1489,6 +1489,8 @@ Error: Tema inválido: unknown. O tema deve ser 'dark' ou 'light'.
     align-items: $align-center;
     gap: $gap;
 }
+
+@include utils.display-flex($flex-direction: row, $flex-wrap: wrap, $justify-content: center, $align-center: center, $gap: 2rem);
 ```
 
 ### Loader
@@ -1510,6 +1512,8 @@ Error: Tema inválido: unknown. O tema deve ser 'dark' ou 'light'.
         }
     }
 }
+
+@include utils.loader($width: 3rem, $border-color: black, $border-top-color: yellow, $border-width: .3rem);
 ```
 
 ### Transformador Pixel para Rem
@@ -1517,4 +1521,6 @@ Error: Tema inválido: unknown. O tema deve ser 'dark' ou 'light'.
 @function px-to-rem($px, $base: 16px) {
     @return $px / $base * 1rem;
 }
+
+font-size: px-to-rem(24px); // 1.5rem
 ```
