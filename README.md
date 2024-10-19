@@ -84,7 +84,7 @@ nav {
 
 ###  Instalação Nextjs/React
 - 1 = npm i sass
-- 2 = dentro da pasta src, crie uma pasta e arquivo **styles/settings.scss**
+- 2 = dentro da pasta src, crie uma pasta e arquivo **styles/settings.module.scss**
 ```scss
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
@@ -99,7 +99,7 @@ $font-terciary: "Montserrat", sans-serif;
 
 #### styles.module.scss
 ```scss
-@import '/src/styles/settings.scss';
+@import '/src/styles/settings.module.scss';
 
 .cabecalho{
 	border: 1px solid red;
@@ -112,7 +112,7 @@ $font-terciary: "Montserrat", sans-serif;
 
 #### index.tsx (coloque só classe e id)
 ```tsx
-import styles from "./styles.scss";
+import styles from "./styles.module.scss";
 
 export default function Header(){
 	return (
