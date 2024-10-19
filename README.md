@@ -72,9 +72,58 @@ nav {
 ```
 
 ### Qual Usar?
-Se você já está acostumada com CSS tradicional, o SCSS é uma escolha natural, pois a sintaxe é quase idêntica.
-Se prefere uma abordagem minimalista e gosta de trabalhar com indentação, a sintaxe SASS pode ser mais adequada.
+- Se você já está acostumada com CSS tradicional, o SCSS é uma escolha natural, pois a sintaxe é quase idêntica.
+- Se prefere uma abordagem minimalista e gosta de trabalhar com indentação, a sintaxe SASS pode ser mais adequada.
 ## 2 - Instalação e Configuração
+
+### Instalação Comum
+- 1 = Instalar a extensão no VS Code → **Live Sass Compiler**
+- 2 = Crie um arquivo SASS e um CSS (devem ter o mesmo nome). Exemplo: style.scss e style.css
+- 3 = Escrever o código no arquivo SASS e aperte em **Watch SASS** na barra inferior, para compilar o arquivo para o style.css.
+- **OBS** = escolha apenas uma pasta para colocar no Watch SASS, pois se tiver vários outros projetos, vão ser gerados vários arquivos SASS neles. 
+
+###  Instalação Nextjs/React
+- 1 = npm i sass
+- 2 = dentro da pasta src, crie uma pasta e arquivo **styles/settings.scss**
+```scss
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$primary-color: #4868ff;
+$secoundary-color: #0fadff;
+
+$font-primary: "Open Sans", sans-serif;
+$font-secoundary: "Afacad Flux", serif;
+$font-terciary: "Montserrat", sans-serif;
+```
+- 3 = estilizando componente
+
+#### styles.module.scss
+```scss
+@import '/src/styles/settings.scss';
+
+.cabecalho{
+	border: 1px solid red;
+
+	.titulo{
+		font-family: $font-primary;
+	}
+}
+```
+
+#### index.tsx (coloque só classe e id)
+```tsx
+import styles from "./styles.scss";
+
+export default function Header(){
+	return (
+		<header className={styles.cabecalho}>
+			<h1 className={styles.titulo}>
+				Olá
+			</h1>
+		</header>
+	)
+}
+```
 ## 3 - Variaveis
 
 O Sass permite o uso de variáveis, facilitando a reutilização de valores como cores, tamanhos e fontes em todo o projeto. Isso melhora a organização e a consistência dos estilos. Abaixo, vou mostrar como você pode usar variáveis no Sass.
